@@ -1,6 +1,5 @@
 {
   "name": "react-gradient-text",
-  "version": "0.0.2",
   "description": "Give your text an animated gradient effect using React.",
   "main": "build/index.js",
   "scripts": {
