@@ -1,19 +1,21 @@
 {
   "name": "react-gradient-text",
-  "version": "0.0.1",
+  "version": "0.0.0-semantically-released",
   "description": "Give your text an animated gradient effect using React.",
   "main": "build/index.js",
   "scripts": {
     "test": "mocha test/.setup.js test/**/*-test.js -w",
     "test:single": "mocha test/.setup.js test/**/*-test.js",
-    "compile": "webpack"
+    "build": "webpack",
+    "commit": "git-cz",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "directories": {
     "src": "/src"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/arlando/react-gradient-text.git"
+    "url": "https://github.com/arlando/react-gradient-text.git"
   },
   "keywords": [
     "react",
@@ -43,15 +45,19 @@
     "jsdom": "8.1.0",
     "mocha": "2.4.5",
     "react-addons-test-utils": "0.14.7",
-    "webpack": "1.12.14"
+    "webpack": "1.12.14",
+    "semantic-release": "^4.3.5"
   },
   "peerDependencies": {
     "react": "0.14.7",
     "react-dom": "0.14.7"
   },
+  "czConfig": {
+    "path": "node_modules/cz-conventional-changelog"
+  },
   "config": {
     "ghooks": {
-      "precommit": "npm run test:single"
+      "pre-commit": "npm run test:single"
     }
   }
 }
