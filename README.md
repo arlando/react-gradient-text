@@ -10,6 +10,10 @@ Documentation and demos here: [http://arlando.github.io/react-gradient-text](htt
 
 ## Sample Usage
 
-```
+```jsx
 <GradientText data='today will be a really good day' gradient={[...colors]} animating={false} />
+```
+
+```jsx
+<GradientText data='today will be a really good day' gradient={[...colors]} hoverable={true} />
 ```
