@@ -1,11 +1,12 @@
 {
   "name": "react-gradient-text",
-  "version": "0.0.0-semantically-released",
+  "version": "0.0.2",
   "description": "Give your text an animated gradient effect using React.",
   "main": "build/index.js",
   "scripts": {
     "test": "mocha test/.setup.js test/**/*-test.js -w",
     "test:single": "mocha test/.setup.js test/**/*-test.js",
+    "prebuild": "rm -rf build && mkdir build",
     "build": "webpack",
     "commit": "git-cz",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
@@ -27,7 +28,7 @@
   "bugs": {
     "url": "https://github.com/arlando/react-gradient-text/issues"
   },
-  "homepage": "http://arlando.github.io/react-gradient-text/",
+  "homepage": "http://arlando.github.io/react-gradient-text#readme",
   "author": "Arlando Battle (https://github.com/arlando)",
   "license": "MIT",
   "devDependencies": {
@@ -45,11 +46,11 @@
     "enzyme": "2.2.0",
     "jsdom": "8.1.0",
     "mocha": "2.4.5",
-    "react-addons-test-utils": "0.14.7",
-    "webpack": "1.12.14",
-    "semantic-release": "^4.3.5",
     "react": "0.14.7",
-    "react-dom": "0.14.7"
+    "react-addons-test-utils": "0.14.7",
+    "react-dom": "0.14.7",
+    "semantic-release": "4.3.5",
+    "webpack": "1.12.14"
   },
   "czConfig": {
     "path": "node_modules/cz-conventional-changelog"
