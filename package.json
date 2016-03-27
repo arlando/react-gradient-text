@@ -25,8 +25,9 @@
     "gradients"
   ],
   "bugs": {
-    "url": "https://github.com/arlando/react-gradient-text.git"
+    "url": "https://github.com/arlando/react-gradient-text/issues"
   },
+  "homepage": "http://arlando.github.io/react-gradient-text/",
   "author": "Arlando Battle (https://github.com/arlando)",
   "license": "MIT",
   "devDependencies": {
@@ -46,9 +47,7 @@
     "mocha": "2.4.5",
     "react-addons-test-utils": "0.14.7",
     "webpack": "1.12.14",
-    "semantic-release": "^4.3.5"
-  },
-  "peerDependencies": {
+    "semantic-release": "^4.3.5",
     "react": "0.14.7",
     "react-dom": "0.14.7"
   },
