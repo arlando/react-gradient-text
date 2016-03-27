@@ -1,0 +1,389 @@
+<html>
+<head>
+    <style>
+        @font-face {
+            font-family: 'CooperHewitt';
+            src: url("assets/CooperHewitt-Bold.otf") format("opentype");
+        }
+
+        body {
+            background: #1F1F1F;
+            margin: 0;
+            color: ghostwhite;
+        }
+
+        .examples {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .examples > div {
+            width: 90vw;
+            padding: 5vmin;
+        }
+
+        .example {
+            padding: 12px;
+            text-align: center;
+            font-size: 64px;
+            font-family: 'CooperHewitt', sans-serif;
+        }
+
+        .gradients-colors {
+            display: flex;
+            width: 100vw;
+            color: gainsboro;
+            text-align: center;
+            flex-wrap: wrap;
+        }
+
+        .gradient-colors p {
+            width: 100vw;
+            font-family: Helvetica, sans-serif;
+            text-transform: uppercase;
+            font-size: 32px;
+            font-weight: 800;
+        }
+
+        .gradient-colors-title {
+            font-size: 72px;
+            width: 100vw;
+            font-style: italic;
+            font-family: serif;
+            padding-bottom: 12px;
+        }
+
+        .gradient-color {
+            width: 100vw;
+            height: 15vh;
+        }
+
+
+        .api-details, .content {
+            font-size: 36px;
+            padding: 1em;
+            text-align: left;
+        }
+
+        .api-details strong {
+            font-family: 'CooperHewitt', sans-serif;
+        }
+
+        .me {
+            font-family: serif;
+            font-size: 32px;
+        }
+
+        xmp {
+            margin: 0;
+        }
+
+        /* Atelier Forest Dark by Bram de Haan (http://atelierbram.github.io/syntax-highlighting/atelier-schemes/forest) */
+
+        /* plain text */
+        .pln {
+            color: #f1efee;
+        }
+
+        @media screen {
+            /* string content */
+            .str {
+                color: #7b9726;
+            }
+
+            /* a keyword */
+            .kwd {
+                color: #6666ea;
+            }
+
+            /* a comment */
+            .com {
+                color: #766e6b;
+            }
+
+            /* a type name */
+            .typ {
+                color: #407ee7;
+            }
+
+            /* a literal value */
+            .lit {
+                color: #df5320;
+            }
+
+            /* punctuation */
+            .pun {
+                color: #f1efee;
+            }
+
+            /* lisp open bracket */
+            .opn {
+                color: #f1efee;
+            }
+
+            /* lisp close bracket */
+            .clo {
+                color: #f1efee;
+            }
+
+            /* a markup tag name */
+            .tag {
+                color: #f22c40;
+            }
+
+            /* a markup attribute name */
+            .atn {
+                color: #df5320;
+            }
+
+            /* a markup attribute value */
+            .atv {
+                color: #3d97b8;
+            }
+
+            /* a declaration */
+            .dec {
+                color: #df5320;
+            }
+
+            /* a variable name */
+            .var {
+                color: #f22c40;
+            }
+
+            /* a function name */
+            .fun {
+                color: #407ee7;
+            }
+        }
+        /* Use higher contrast and text-weight for printable form. */
+        @media print, projection {
+            .str {
+                color: #006600;
+            }
+
+            .kwd {
+                color: #006;
+                font-weight: bold;
+            }
+
+            .com {
+                color: #600;
+                font-style: italic;
+            }
+
+            .typ {
+                color: #404;
+                font-weight: bold;
+            }
+
+            .lit {
+                color: #004444;
+            }
+
+            .pun, .opn, .clo {
+                color: #444400;
+            }
+
+            .tag {
+                color: #006;
+                font-weight: bold;
+            }
+
+            .atn {
+                color: #440044;
+            }
+
+            .atv {
+                color: #006600;
+            }
+        }
+        /* Style */
+        pre.prettyprint {
+            background: #1b1918;
+            color: #68615e;
+            font-family: Menlo, Consolas, "Bitstream Vera Sans Mono", "DejaVu Sans Mono", Monaco, monospace;
+            font-size: 12px;
+            line-height: 1.5;
+            border: 1px solid #1b1918;
+            padding: 10px;
+            /* border-radius: 3px; */
+        }
+
+        /* Specify class=linenums on a pre to get line numbering */
+        ol.linenums {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        /* IE indents via margin-left */
+        li.L0,
+        li.L1,
+        li.L2,
+        li.L3,
+        li.L4,
+        li.L5,
+        li.L6,
+        li.L7,
+        li.L8,
+        li.L9 {
+            /* */
+        }
+
+        /* Alternate shading for lines */
+        li.L1,
+        li.L3,
+        li.L5,
+        li.L7,
+        li.L9 {
+            /* */
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="content">
+        <p>react-gradient-text</p>
+        <p>JavaScript library made with React to generate text gradients and opacity effects.</p>
+        <p>$ npm install react-gradient-text</p>
+        <p class="me">Designed by <a href="http://reverie.space" target="_blank">Arlando Battle</a> in NYC.</p>
+    </div>
+</header>
+<div class="examples">
+    <div class="example-base">
+        <div id="simple" class="example"></div>
+        <div class="example-code">
+            <pre class="prettyprint">
+                <code>
+
+                    <xmp>
+                        <GradientText data='today will be a really good day' gradient={[...colors]} animating={false}>
+                        </GradientText>
+                    </xmp>
+                </code>
+            </pre>
+        </div>
+    </div>
+    <div class="example-base">
+        <div id="header" class="example"></div>
+        <div class="example-code">
+            <pre class="prettyprint">
+                <code>
+
+                    <xmp>
+<GradientText data='React Gradient Text' gradient={[...colors]}>
+</GradientText>
+                    </xmp>
+                </code>
+            </pre>
+        </div>
+    </div>
+    <div class="example-opacity">
+        <div id="opacity" class="example" style="color:darkorange"></div>
+        <div class="example-code">
+            <pre class="prettyprint">
+                <code>
+                    <xmp>
+<div style="color:darkorange">
+    <GradientText data='Change the opacity' gradient={[]} opacity={50}>
+    </GradientText>
+</div>
+                    </xmp>
+                </code>
+            </pre>
+        </div>
+    </div>
+    <div class="example-slowitdown">
+        <div id="slowitdown" class="example"></div>
+        <div class="example-code">
+            <pre class="prettyprint">
+                <code>
+                    <xmp>
+<GradientText data='Slow it all down...' gradient={[...colors]} interval={250}>
+</GradientText>
+                    </xmp>
+                </code>
+            </pre>
+        </div>
+    </div>
+    <div class="example-hoverable">
+        <div id="hoverable" class="example"></div>
+        <div class="example-code">
+            <pre class="prettyprint">
+                <code>
+                    <xmp>
+<GradientText data='On Hover' gradient={[...colors]} hoverable={true}>
+</GradientText>
+                    </xmp>
+                </code>
+            </pre>
+        </div>
+    </div>
+    <div class="example-twocolors">
+        <div id="twocolors" class="example"></div>
+        <div class="example-code">
+            <pre class="prettyprint">
+                <code>
+                    <xmp>
+let data = [
+    'E50003',
+    '007AE5'
+]
+
+<GradientText data="Two Colors" gradient={data} hoverable={true}>
+</GradientText>
+                    </xmp>
+                </code>
+            </pre>
+        </div>
+    </div>
+    <div class="example-onevent">
+        <div id="onevent" class="example"></div>
+        <div class="example-code">
+            <pre class="prettyprint">
+                <code>
+                    <xmp>
+
+let evt = {
+    name: 'scroll',
+    callback: function (e) {
+        console.log('foo')
+    }
+};
+
+return <GradientText data='On Event' gradient={[...colors]} onEvent={evt}>
+                        </GradientText>
+                    </xmp>
+                </code>
+            </pre>
+        </div>
+    </div>
+</div>
+
+<div class="gradients-colors">
+    <p class="gradient-colors-title">API Details</p>
+    <div class="api-details">
+        <p><strong>data (string, required)</strong></p>
+        <p>A string of characters which will have opacity/color changes.</p>
+        <p><strong>gradient ([string], optional)</strong></p>
+        <p>An array of colors (hexadecimal, rgb, rgba) which will be the color each character string, if this argument is elided wrap component with a 'default' color</p>
+        <p><strong>hoverable (bool, optional)</strong></p>
+        <p>Animate the gradient on hover</p>
+        <p><strong>interval (number, optional)</strong></p>
+        <p>Set the interval for each time to takes the colors to propagate. A negative interval will cause the text to be applied the gradient, but not animated.</p>
+        <p><strong>onEvent ({name: string, callback: func }, optional)</strong></p>
+        <p>An object with an event name and callback. It will attach an event listener to the current window with the supplied name and increase the tick by one each time the event happens and will call your callback with the event argument. This allows one to trigger gradients on event such as scrolls, resizes, or user triggered events such as adding items to shopping carts, the possbilities are endless.</p>
+        <p><strong>animating (bool, optional)</strong></p>
+        <p>Should the gradient effect animate</p>
+    </div>
+    <br/>
+    <br/>
+</div>
+
+
+<script src="demo.build.js"></script>
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/prettify.js"></script>
+<script>prettyPrint();</script>
+</body>
+</html>
