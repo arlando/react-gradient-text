@@ -1,10 +1,10 @@
 ### react-gradient-text
 
-[![travis build](https://img.shields.io/travis/arlando/react-gradient-text.svg?style=flat-square)](https://img.shields.io/travis/arlando/react-gradient-text)
+[![travis build](https://img.shields.io/travis/arlando/react-gradient-text.svg?style=flat-square)](https://travis-ci.org/arlando/react-gradient-text)
 
 More Documentation and demos here: [http://arlando.github.io/react-gradient-text](http://arlando.github.io/react-gradient-text/)
 
-## Descripition
+## Description
 
 Make gradient text effects with react. Bind text gradient text effects to generic events such as scroll.
 
