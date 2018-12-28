@@ -1,4 +1,4 @@
-require("@babel/register");
+require('git @babel/register');
 
 const jsdom = require('jsdom').jsdom;
 
