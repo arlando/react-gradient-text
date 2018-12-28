@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
 import { GradientText } from '../src/GradientText';
 import Gradient from '../node_modules/gradient/index.js';
@@ -10,7 +10,6 @@ let rainbow3 = Gradient('#f5f5f5', '#edc613', 20).toArray('rgbString');
 const Simple = () =>
     <GradientText data='today will be a really good day' gradient={rainbow3} animating={false}>
     </GradientText>
-
 
 const Header = () =>
     <GradientText data='React Gradient Text' gradient={rainbow}>
