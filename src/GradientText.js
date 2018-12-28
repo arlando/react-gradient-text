@@ -1,18 +1,19 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 class GradientText extends React.Component {
 
     static propTypes = {
-        data: React.PropTypes.string.isRequired,
-        gradient: React.PropTypes.array,
-        interval: React.PropTypes.number,
-        hoverable: React.PropTypes.bool,
-        onEvent: React.PropTypes.shape({
-            name: React.PropTypes.string.isRequired,
-            callback: React.PropTypes.func.isRequired
+        data: PropTypes.string.isRequired,
+        gradient: PropTypes.array,
+        interval: PropTypes.number,
+        hoverable: PropTypes.bool,
+        onEvent: PropTypes.shape({
+            name: PropTypes.string.isRequired,
+            callback: PropTypes.func.isRequired
         }),
-        animating: React.PropTypes.bool,
-        opacity: React.PropTypes.number
+        animating: PropTypes.bool,
+        opacity: PropTypes.number
     };
 
     static defaultProps = {

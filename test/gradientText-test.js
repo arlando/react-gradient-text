@@ -1,6 +1,10 @@
 import React from 'react';
 import { expect, spy } from 'chai';
-import { shallow, mount, render } from 'enzyme';
+
+import Enzyme, { mount } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
+Enzyme.configure({ adapter: new Adapter() });
+
 import { GradientText } from '../src/GradientText';
 
 describe('GradientText', () => {

@@ -30,5 +30,18 @@ onEvent  | obj| false   | adds an event listener to the current window then call
 
 Follows Angular Commit Guidelines using commitizen and semantic-release
 
-Run tests with npm run test
+### Local Compilation
 
+```$ npm run build```
+
+```$ npm run test```
+
+Will run the test as a process and will re run on every code change
+
+```$ npm run test:single```
+
+Will run the tests as a single run (good for build/compilation pipelines)
+
+```$ npm start```
+
+Run a webpack dev server

@@ -1,7 +1,7 @@
 const path = require('path');
-const webpack = require('webpack');
 
 module.exports = {
+    mode: 'development',
     entry: {
         index: [
             './index.js'
@@ -23,15 +23,14 @@ module.exports = {
         }
     },
     module: {
-        loaders: [{
+        rules: [{
             test: /\.jsx?$/,
             exclude: /(node_modules)/,
-            loader: 'babel'
+            loader: 'babel-loader'
         }]
     },
     resolve: {
         extensions: [
-            '',
             '.js',
             '.jsx'
         ]
