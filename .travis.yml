@@ -10,7 +10,7 @@ node_js:
 before_install:
   - npm i -g npm@^6.4.1
 before_script:
-  - npm prune
+  - npm ci
 script:
   - npm run test:single
   - npm run build
