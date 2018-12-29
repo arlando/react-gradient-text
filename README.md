@@ -30,7 +30,7 @@ onEvent  | obj| false   | adds an event listener to the current window then call
 
 Follows Angular Commit Guidelines using commitizen and semantic-release
 
-### Local Compilation
+## Local Compilation
 
 ```$ npm run build```
 
@@ -44,4 +44,8 @@ Will run the tests as a single run (good for build/compilation pipelines)
 
 ```$ npm start```
 
-Run a webpack dev server
+Runs a webpack dev server
+
+## New Releases
+
+- Merges to master force semantic to make a new release and tag a version on github see `.releaserc` file
