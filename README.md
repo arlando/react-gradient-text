@@ -48,4 +48,6 @@ Runs a webpack dev server
 
 ## New Releases
 
+The project uses commitizen to manage the commits: `$ git cz`
+
 - Merges to master force semantic to make a new release and tag a version on github see `.releaserc` file

@@ -16,7 +16,7 @@ jobs:
     - stage: release
       if: branch = master
       # Advanced: optionally overwrite your default `script` step to skip the tests
-      # script: skip
+      script: skip
       deploy:
         provider: script
         skip_cleanup: true
