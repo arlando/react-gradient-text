@@ -4,13 +4,19 @@ notifications:
   email: false
 node_js:
   - 'lts/*'
-install:
-  - npm ci
-script:
-  - npm run test:single
-  - npm run build
-after_success:
-  - npm run semantic-release
-branches:
-  except:
-    - "/^v\\d+\\.\\d+\\.\\d+$/"
+
+jobs:
+  include:
+    - stage: test
+      install:
+        - npm ci
+      script:
+        - npm run test:single
+        - npm run build
+    - stage: release
+      script: skip
+      deploy:
+        provider: script
+        skip_cleanup: true
+        script:
+          - npx semantic-release
